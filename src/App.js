@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Item from "./components/Item";
+import shortid from "shortid";
 
 import "./App.css";
 
@@ -7,23 +8,27 @@ class App extends Component {
   state = {
     cart: [
       {
+        id: shortid.generate(),
         name: "scarf",
         price: "11.50",
         quantity: 1,
       },
       {
+        id: shortid.generate(),
         name: "Shirt",
-        price: "11.50",
+        price: "9.80",
         quantity: 1,
       },
       {
-        name: "scarf",
-        price: "11.50",
+        id: shortid.generate(),
+        name: "pants",
+        price: "25.50",
         quantity: 1,
       },
     ],
     isOnMailingList: false,
   };
+  onAddItem = () => {};
 
   onChangeItem = (item) => {
     // This should get called any time you change an item!
@@ -69,7 +74,7 @@ class App extends Component {
         <h2>Shopping Cart</h2>
         <ul className="list">
           {this.state.cart.map((item) => (
-            <li>
+            <li key={item.id}>
               <Item add properties here />
             </li>
           ))}
