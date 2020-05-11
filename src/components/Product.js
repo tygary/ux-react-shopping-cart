@@ -1,13 +1,13 @@
 import React from "react";
 import Quantity from "./Quantity";
 
-function Item(props) {
+function Product(props) {
   return (
     <span>
       Item Name - Item Price -
-      <Quantity add properties here />
+      <Quantity your props here />
     </span>
   );
 }
 
-export default Item;
+export default Product;
