@@ -66,7 +66,7 @@ class App extends Component {
         <h2>Shopping Cart</h2>
         <ul className="list">
           {this.state.cart.map((item) => (
-            <li key={item.key}>
+            <li key={item.id}>
               <Product your props here />
             </li>
           ))}
